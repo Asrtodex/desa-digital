@@ -1,0 +1,11 @@
+<h1>Post form Create</h1>
+<form>
+    {%csrf_token%}
+    {% for field in form %}
+    <div class='field-group'>
+    {{ field.error }}
+    {{ field.label_tag }} {{ field }}
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-Success">Save</button>
+</form>
